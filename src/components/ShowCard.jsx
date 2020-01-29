@@ -26,8 +26,10 @@ function ShowCard(props) {
                 backgroundImage: `url(${show.image})`
               }}></div>
           </Link>
-          <h2 className='show-title'>{show.title}</h2>
-          <p className='show-description'>{show.description}</p>
+          <div className='freak'>
+            <h2 className='show-title'>{show.title}</h2>
+            <p className='show-description'>{show.description}</p>
+          </div>
         </div>
       ))}
     </div>

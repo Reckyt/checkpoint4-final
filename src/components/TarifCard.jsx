@@ -10,13 +10,9 @@ export default function TarifCard(props) {
         className='flip-container' /*onClick="this.classList.toggle('hover');"*/
       >
         <div className='flipper'>
-          <div
-            className='frontT'
-            style={{
-              backgroundImage: `url(https://icon2.kisspng.com/20180706/kyh/kisspng-euro-sign-currency-symbol-pound-sign-200-euro-5b3fb21505e782.9347909915309010130242.jpg)`
-            }}></div>
+          <div className='frontT'></div>
           <div className='backT'>
-            <span>{price}</span>
+            <div className='pripri'>{price}</div>
           </div>
         </div>
       </div>

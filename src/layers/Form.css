@@ -3,8 +3,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #3dc1d3;
-  min-height: 80vh;
+  background-color: #596275;
+
+  min-height: 71vh;
+}
+
+.form-container h1 {
+  color: white;
 }
 
 .form {
@@ -31,6 +36,7 @@ textarea {
 
 .form-lign label {
   font-size: 3vh;
+  color: white;
 }
 
 .form-lign textarea {

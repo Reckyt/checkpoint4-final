@@ -5,7 +5,7 @@ import TarifCard from "../components/TarifCard";
 
 export default function Tarif() {
   return (
-    <div>
+    <div className='tarif'>
       <div className='infos'>
         <span>le prix de votre ticket sera celui de votre chance,</span>
         <span>

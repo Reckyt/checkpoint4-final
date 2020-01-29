@@ -34,22 +34,29 @@
 
 /* front pane, placed above back */
 .frontT {
-  z-index: 2;
+  /* z-index: 2; */
   /* transform: rotateY(0deg); */
-  background-size: cover;
+  background-image: url("../assets/school-doubt.svg");
+  /* background-size: no-repeat; */
+  border: solid 2px black;
 }
 
 /* back, initially hidden pane */
 .backT {
   transform: rotateY(180deg);
-  background-color: brown;
+  background-color: #e77f67;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
-.backT span {
-  margin: 5px;
-  font-size: 3vh;
+.pripri {
+  font-size: 10vh;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Indie Flower", cursive;
 }
 
 /* --------------------------- */
@@ -73,6 +80,6 @@
 .cards {
   display: flex;
   flex-wrap: wrap;
-  margin: 20px;
+  margin: 10px;
   justify-content: center;
 }

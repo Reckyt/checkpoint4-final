@@ -14,7 +14,7 @@ export default function NavBar() {
           </Link>
         </div>
         <div className='link'>
-          <Link to='/book' className='noDeco'>
+          <Link to='/reservation' className='noDeco'>
             Réservations
           </Link>
         </div>

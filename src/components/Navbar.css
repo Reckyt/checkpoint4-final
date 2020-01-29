@@ -10,8 +10,9 @@
   display: flex;
   justify-content: center;
   font-size: 10vh;
-  margin: 1vh;
+  /* margin: 1vh; */
   color: #303952;
+  font-family: "Indie Flower", cursive;
 }
 
 .navBar-link {
@@ -24,4 +25,5 @@
 .noDeco {
   text-decoration: none;
   color: #303952;
+  font-family: "Indie Flower", cursive;
 }
