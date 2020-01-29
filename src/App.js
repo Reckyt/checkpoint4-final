@@ -6,10 +6,11 @@ import NavBar from "./components/NavBar";
 
 import SignIn from "./layers/SignIn";
 import Home from "./layers/Home";
-import Show from "./layers/Show";
-import Tarif from "./layers/tarif";
-import Book from "./layers/book";
+import Artist from "./layers/Artist";
+import Tarif from "./layers/Tarif";
+import Book from "./layers/Book";
 import Contact from "./layers/Contact";
+import Form from "./layers/Form";
 
 import "./App.css";
 
@@ -21,10 +22,11 @@ function App() {
         <Switch>
           <Route exact path='/' component={SignIn} />
           <Route path='/home' component={Home} />
-          <Route path='/Show' component={Show} />
-          <Route path='/Tarif' component={Tarif} />
-          <Route path='/Book' component={Book} />
-          <Route path='/Contact' component={Contact} />
+          <Route path='/artist' component={Artist} />
+          <Route path='/tarif' component={Tarif} />
+          <Route path='/book' component={Book} />
+          <Route path='/contact' component={Contact} />
+          <Route path='/Form' component={Form} />
         </Switch>
       </ScrollToTop>
     </BrowserRouter>

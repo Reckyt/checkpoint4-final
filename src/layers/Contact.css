@@ -1,0 +1,17 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: aqua;
+  height: 80vh;
+}
+
+.mail {
+  font-size: 14vh;
+}
+
+.adress {
+  font-size: 5vh;
+}

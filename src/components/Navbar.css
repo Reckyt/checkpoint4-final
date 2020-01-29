@@ -1,0 +1,26 @@
+.navBar {
+  width: 100%;
+  height: 20vh;
+  background-color: brown;
+  display: flex;
+  flex-direction: column;
+}
+
+.navBar-title {
+  display: flex;
+  justify-content: center;
+  font-size: 10vh;
+  margin: 1vh;
+}
+
+.navBar-link {
+  display: flex;
+  flex-direction: row;
+  font-size: 5vh;
+  justify-content: space-around;
+}
+
+.noDeco {
+  text-decoration: none;
+  color: black;
+}

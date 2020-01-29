@@ -1,0 +1,16 @@
+.container-show-card {
+  width: 50%;
+}
+
+.show-card {
+  position: relative;
+  width: 30%;
+  margin: 25px;
+  background-size: cover;
+}
+
+.show-card:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}

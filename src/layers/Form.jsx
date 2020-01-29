@@ -1,5 +1,5 @@
 import React from "react";
 
-export default function Tarif() {
+export default function Form() {
   return <div></div>;
 }
