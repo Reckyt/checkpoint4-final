@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className='home'>
       <div className='home-title'>
-        <h1>Découvrez Nos spectacles</h1>
+        <h1>Découvrez nos spectacles</h1>
       </div>
       <ShowCard />
     </div>

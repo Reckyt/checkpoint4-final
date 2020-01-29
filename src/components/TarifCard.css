@@ -9,8 +9,8 @@
 }
 
 .flip-container,
-.front,
-.back {
+.frontT,
+.backT {
   width: 320px;
   height: 480px;
 }
@@ -24,8 +24,8 @@
 }
 
 /* hide back of pane during swap */
-.front,
-.back {
+.frontT,
+.backT {
   backface-visibility: hidden;
   position: absolute;
   top: 0;
@@ -33,21 +33,21 @@
 }
 
 /* front pane, placed above back */
-.front {
+.frontT {
   z-index: 2;
   /* transform: rotateY(0deg); */
   background-size: cover;
 }
 
 /* back, initially hidden pane */
-.back {
+.backT {
   transform: rotateY(180deg);
   background-color: brown;
   display: flex;
   flex-direction: column;
 }
 
-.back span {
+.backT span {
   margin: 5px;
   font-size: 3vh;
 }
@@ -58,7 +58,7 @@
   position: relative;
 }
 
-.vertical .back {
+.vertical .backT {
   transform: rotateX(180deg);
 }
 

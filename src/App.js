@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { connect } from "react-redux";
 import ScrollToTop from "react-router-scroll-top";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
@@ -6,7 +8,7 @@ import NavBar from "./components/NavBar";
 
 import SignIn from "./layers/SignIn";
 import Home from "./layers/Home";
-import Artist from "./layers/Artist";
+import Show from "./layers/Show";
 import Tarif from "./layers/Tarif";
 import Book from "./layers/Book";
 import Contact from "./layers/Contact";
@@ -14,7 +16,21 @@ import Form from "./layers/Form";
 
 import "./App.css";
 
-function App() {
+function App(props) {
+  const [shows, setShows] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:3000/api/show")
+      .then(res => res.data)
+      .then(data => setShows(data));
+  }, []);
+
+  props.dispatch({
+    type: "GET_SHOWS",
+    payload: shows
+  });
+
   return (
     <BrowserRouter>
       <ScrollToTop>
@@ -22,7 +38,7 @@ function App() {
         <Switch>
           <Route exact path='/' component={SignIn} />
           <Route path='/home' component={Home} />
-          <Route path='/artist' component={Artist} />
+          <Route path='/show/' component={Show} />
           <Route path='/tarif' component={Tarif} />
           <Route path='/book' component={Book} />
           <Route path='/contact' component={Contact} />
@@ -33,4 +49,4 @@ function App() {
   );
 }
 
-export default App;
+export default connect(null, null)(App);

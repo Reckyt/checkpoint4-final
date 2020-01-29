@@ -1,34 +1,38 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 
 import "./ArtistCard.css";
 
 export default function ArtistCard() {
+  const [artists, setArtists] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:3000/api/artist")
+      .then(res => res.data)
+      .then(data => setArtists(data));
+  }, []);
+
   return (
-    <div>
-      <h1>Nom du psectacle</h1>
-      <div>texte de description du spectacle</div>
-      <div
-        className='flip-container'
-        ontouchstart="this.classList.toggle('hover');">
-        <div className='flipper'>
-          <div
-            className='front'
-            style={{
-              backgroundImage: `url(
-              https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg1muIVsGyPYdXdVCbhPQmK58sbtxecaU7x6EesTddLpses8MuKg&s
-            )`
-            }}></div>
-          <div className='back'>
-            <span>nom</span>
-            <span>prénom</span>
-            <span>
-              petite bio qui raconte d'ou vient cet artiste et qui ba gitru zzdj
-              petite bio qui raconte d'ou vient cet artiste petite bio qui
-              raconte d'ou vient cet artiste
-            </span>
+    <div className='cards'>
+      {artists.map(artist => (
+        <div
+          className='flip-container'
+          ontouchstart="this.classList.toggle('hover');">
+          <div className='flipper'>
+            <div
+              className='front'
+              style={{
+                backgroundImage: `url(${artist.image})`
+              }}></div>
+            <div className='back'>
+              <span>{artist.lastname}</span>
+              <span>{artist.firstname}</span>
+              <span>{artist.bio}</span>
+            </div>
           </div>
         </div>
-      </div>
+      ))}
     </div>
   );
 }

@@ -19,10 +19,9 @@
   flex-direction: row;
   font-size: 5vh;
   justify-content: space-around;
-  color: #303952;
 }
 
 .noDeco {
   text-decoration: none;
-  color: black;
+  color: #303952;
 }
