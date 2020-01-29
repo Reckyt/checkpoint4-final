@@ -24,7 +24,7 @@ export default function Form() {
           <textarea name='text'></textarea>
         </div>
       </form>
-      <button className='button'>Envoyer</button>
+      <button className='button-form'>Envoyer</button>
     </div>
   );
 }

@@ -21,6 +21,8 @@ import "./App.css";
 function App(props) {
   const [shows, setShows] = useState([]);
 
+  console.log(shows);
+
   useEffect(() => {
     axios
       .get("http://localhost:3000/api/show")

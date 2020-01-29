@@ -1,85 +1,91 @@
-.flip-container {
-  perspective: 1000px;
+/* @import url(https://fonts.googleapis.com/css?family=Open+Sans); */
+
+/* body {
+  background: #f17563;
+  font-family: Open Sans;
+  font-size: 50px;
+  color: #222;
+} */
+
+label {
+  -webkit-perspective: 1000px;
+  /* perspective: 1000px; */
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  display: flex;
+  width: 300px;
+  height: 200px;
+  /* position: absolute; */
+  /* left: 50%;
+  top: 50%; */
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  cursor: pointer;
   margin: 20px;
 }
-/* flip the pane when hovered */
-.flip-container:hover .flipper,
-.flip-container.hover .flipper {
-  transform: rotateY(180deg);
-}
 
-.flip-container,
-.frontT,
-.backT {
-  width: 320px;
-  height: 480px;
-}
-
-/* flip speed goes here */
-.flipper {
-  transition: 0.6s;
-  transform-style: preserve-3d;
-
-  position: relative;
-}
-
-/* hide back of pane during swap */
-.frontT,
-.backT {
-  backface-visibility: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-/* front pane, placed above back */
 .frontT {
-  /* z-index: 2; */
-  /* transform: rotateY(0deg); */
   background-image: url("../assets/school-doubt.svg");
-  /* background-size: no-repeat; */
   border: solid 2px black;
 }
 
-/* back, initially hidden pane */
-.backT {
-  transform: rotateY(180deg);
-  background-color: #e77f67;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.pripri {
-  font-size: 10vh;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "Indie Flower", cursive;
-}
-
-/* --------------------------- */
-
-.vertical.flip-container {
+.card {
   position: relative;
+  height: 150%;
+  width: 100%;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: all 600ms;
+  transition: all 600ms;
+  /* z-index: 20; */
 }
 
-.vertical .backT {
+.card div {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  /* background: #fff; */
+  text-align: center;
+  line-height: 200px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 2px;
+}
+
+.card .backT {
+  color: #fff;
+  font-size: 4vh;
+  background-color: #e77f67;
+  -webkit-transform: rotateX(180deg);
   transform: rotateX(180deg);
-}
-
-.vertical.flip-container .flipper {
-  transform-origin: 100% 213.5px; /* half of height */
-}
-
-.vertical.flip-container:hover .flipper {
-  transform: rotateX(-180deg);
-}
-
-.cards {
   display: flex;
-  flex-wrap: wrap;
-  margin: 10px;
   justify-content: center;
+  align-items: center;
+}
+
+label:hover .card {
+  /* -webkit-transform: rotateX(20deg); */
+  /* transform: rotateX(20deg); */
+  /* box-shadow: 0 20px 20px rgba(50, 50, 50, 0.2); */
+}
+
+input {
+  display: none;
+}
+
+:checked + .card {
+  transform: rotateX(180deg);
+  -webkit-transform: rotateX(180deg);
+}
+
+/* label:hover :checked + .card {
+  transform: rotateX(160deg);
+  -webkit-transform: rotateX(160deg);
+  box-shadow: 0 20px 20px rgba(255, 255, 255, 0.2);
+} */
+
+.contain-checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

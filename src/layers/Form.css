@@ -10,6 +10,7 @@
 
 .form-container h1 {
   color: white;
+  font-family: "Indie Flower", cursive;
 }
 
 .form {
@@ -37,12 +38,19 @@ textarea {
 .form-lign label {
   font-size: 3vh;
   color: white;
+  font-family: "Indie Flower", cursive;
 }
 
 .form-lign textarea {
   height: 200px;
 }
 
-.button {
+.button-form {
+  width: 10%;
+  height: 50px;
+  font-size: 3vh;
+  font-family: "Indie Flower", cursive;
+  background-color: white;
+  border: none;
   margin-top: 40px;
 }

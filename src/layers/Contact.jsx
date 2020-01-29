@@ -13,7 +13,7 @@ export default function Contact() {
         9 allée Serr, 33100 BORDEAUX - TEL : 06 66 96 17 77
       </h3>
       <Link to='/form'>
-        <button type='button'>Nous contactez directement</button>
+        <button className='button-contact'>Nous contactez directement</button>
       </Link>
     </div>
   );
