@@ -1,0 +1,42 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #3dc1d3;
+  min-height: 80vh;
+}
+
+.form {
+  border: solid 1px black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 50%;
+  min-height: 40vh;
+  padding: 10px;
+}
+
+.form-lign {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-lign input,
+textarea {
+  width: 70%;
+}
+
+.form-lign label {
+  font-size: 3vh;
+}
+
+.form-lign textarea {
+  height: 200px;
+}
+
+.button {
+  margin-top: 40px;
+}
