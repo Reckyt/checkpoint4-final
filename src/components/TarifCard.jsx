@@ -9,12 +9,11 @@ export default function TarifCard(props) {
 
   const handleClick = () => {
     setPrix({ price });
-    console.log("ok");
     axios.post("http://localhost:3000/api/command/price", { price });
   };
 
   return (
-    <div className='contain-checkbox'>
+    <div id='game' className='contain-checkbox'>
       <label className='lala'>
         <input className='input-card' type='checkbox' />
         <div className='card' onClick={() => setOk(true)}>
