@@ -4,20 +4,25 @@ import "./Tarif.css";
 import TarifCard from "../components/TarifCard";
 
 export default function Tarif() {
-  const [ok, setOk] = useState(false);
-  const [clik, setClik] = useState(1);
+  const [popUp, setPopUp] = useState(false);
+  const [click, setClick] = useState(1);
 
-  const finish = () => {
-    if (clik === 0) {
-      document.getElementById("game").disabled = true;
+  const handleClick = () => {
+    console.log("ok", click);
+    if (click === 1) {
+      console.log("u", click);
+      setPopUp(true);
+      setClick(0);
+    } else {
+      setPopUp(false);
     }
   };
 
   return (
     <div className='tarif'>
-      <div className={ok === true ? "popup" : "popupf"}>
+      <div className={popUp ? "popup" : "popupf"}>
         Bravo, tu connais maintenant ton prix
-        <button className='button-popup' onClick={() => setOk(false)}>
+        <button className='button-popup' onClick={() => setPopUp(false)}>
           fermer
         </button>
       </div>
@@ -30,15 +35,14 @@ export default function Tarif() {
       </div>
 
       <div className='container-price'>
+        <TarifCard price={"gratuit"} handlePopUp={handleClick} click={click} />
+        <TarifCard price={"1000€"} handlePopUp={handleClick} click={click} />
+        <TarifCard price={"500€"} handlePopUp={handleClick} click={click} />
         <TarifCard
-          price={"gratuit"}
-          ok={ok}
-          setOk={setOk}
-          onClick={(() => finish(), () => setClik(0))}
+          price={"bannie du cirque"}
+          handlePopUp={handleClick}
+          click={click}
         />
-        <TarifCard price={"1000€"} ok={ok} setOk={setOk} />
-        <TarifCard price={"500€"} ok={ok} setOk={setOk} />
-        <TarifCard price={"bannie du cirque"} ok={ok} setOk={setOk} />
       </div>
     </div>
   );

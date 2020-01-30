@@ -15,13 +15,11 @@ function ShowCard(props) {
             <Link to={`/show/${show.id}`}>
               <div
                 className='show-card'
-                style={{
-                  backgroundImage: `url(${show.picture})`
-                }}></div>
+                style={{ backgroundImage: `url("${show.picture}")` }}></div>
             </Link>
             <div className='freak'>
               <h2 className='show-title'>{show.title}</h2>
-              <p className='show-description'>{show.description}</p>
+              <p className='show-description'>{show.slogan}</p>
             </div>
           </div>
         ))}

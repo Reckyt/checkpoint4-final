@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import "./TarifCard.css";
 
 export default function TarifCard(props) {
-  const { price, ok, setOk } = props;
+  const { price, handlePopUp, click } = props;
   const [prix, setPrix] = useState("");
 
   const handleClick = () => {
@@ -15,8 +15,8 @@ export default function TarifCard(props) {
   return (
     <div id='game' className='contain-checkbox'>
       <label className='lala'>
-        <input className='input-card' type='checkbox' />
-        <div className='card' onClick={() => setOk(true)}>
+        <input className='input-card' selected='selected' type='checkbox' />
+        <div className="card" onClick={handlePopUp}>
           <div className='frontT' onClick={() => handleClick()} />
           <div className='backT'>{price}</div>
         </div>

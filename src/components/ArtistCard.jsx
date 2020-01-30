@@ -10,9 +10,11 @@ export default function ArtistCard(props) {
 
   return (
     <div>
-      <div className='header'>
-        <div>{description[0]}</div>
-        <h1>{title[0]}</h1>
+      <div className='container-header'>
+        <div className='header'>
+          <div>{description[0]}</div>
+          <h1>{title[0]}</h1>
+        </div>
       </div>
       <div className='cards'>
         {artists.map(artist => (
