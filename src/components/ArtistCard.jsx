@@ -1,17 +1,9 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 import "./ArtistCard.css";
 
-export default function ArtistCard() {
-  const [artists, setArtists] = useState([]);
-
-  useEffect(() => {
-    axios
-      .get("http://localhost:3000/api/artist")
-      .then(res => res.data)
-      .then(data => setArtists(data));
-  }, []);
+export default function ArtistCard(props) {
+  const { artists } = props;
 
   return (
     <div className='cards'>
@@ -26,8 +18,12 @@ export default function ArtistCard() {
                 backgroundImage: `url(${artist.image})`
               }}></div>
             <div className='back'>
-              <span>{artist.lastname}</span>
-              <span>{artist.firstname}</span>
+              <span>
+                <b>{artist.lastname}</b>
+              </span>
+              <span>
+                <b>{artist.firstname}</b>
+              </span>
               <span>{artist.bio}</span>
             </div>
           </div>

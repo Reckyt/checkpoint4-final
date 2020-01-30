@@ -6,8 +6,8 @@ export default function TarifCard(props) {
   const { price } = props;
   return (
     <div className='contain-checkbox'>
-      <label>
-        <input type='checkbox' />
+      <label className='lala'>
+        <input className='input-card' type='checkbox' />
         <div className='card'>
           <div className='frontT' />
           <div className='backT'>{price}</div>
