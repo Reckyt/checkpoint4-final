@@ -9,7 +9,7 @@ export default function NavBar() {
       <div className='navBar-title'>Wild Circus</div>
       <div className='navBar-link'>
         <div className='link'>
-          <Link to='/home' className='noDeco'>
+          <Link to='/' className='noDeco'>
             Accueil
           </Link>
         </div>

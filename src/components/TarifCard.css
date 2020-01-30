@@ -69,11 +69,6 @@
   align-items: center;
 }
 
-.popup {
-  position: absolute;
-  z-index: 2;
-}
-
 /* --------------------------------------------------------------------- */
 
 /* label:hover :checked + .card {

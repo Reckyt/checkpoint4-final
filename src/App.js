@@ -38,9 +38,8 @@ function App(props) {
       <ScrollToTop>
         <NavBar />
         <Switch>
-          <Route exact path='/' component={SignIn} />
-          <Route path='/home' component={Home} />
-          <Route path='/show/' component={Show} />
+          <Route exact path='/' component={Home} />
+          <Route path='/show/:id' component={Show} />
           <Route path='/tarif' component={Tarif} />
           <Route path='/book' component={Book} />
           <Route path='/contact' component={Contact} />
@@ -54,3 +53,5 @@ function App(props) {
 }
 
 export default connect(null, null)(App);
+
+// <Route exact path='/' component={SignIn} />

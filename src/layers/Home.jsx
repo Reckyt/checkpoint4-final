@@ -4,13 +4,13 @@ import ShowCard from "../components/ShowCard";
 
 import "./Home.css";
 
-export default function Home() {
+export default function Home(props) {
   return (
     <div className='home'>
       <div className='home-title'>
         <h1>Découvrez nos spectacles</h1>
       </div>
-      <ShowCard />
+      <ShowCard props={props} />
     </div>
   );
 }

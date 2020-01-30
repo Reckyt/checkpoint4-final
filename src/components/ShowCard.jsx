@@ -7,31 +7,24 @@ import "./ShowCard.css";
 function ShowCard(props) {
   const { shows } = props;
 
-  // const handleClick = show => {
-  //   for (let i = 1; i < shows.length; i++) {
-  //     if (show.id === i) {
-  //       props.history.push(`/show/${show.id}`);
-  //     }
-  //   }
-  // };
-
   return (
     <div className='container-show-card'>
-      {shows.map(show => (
-        <div>
-          <Link to='/show' /*onClick={() => handleClick(show)}*/>
-            <div
-              className='show-card'
-              style={{
-                backgroundImage: `url(${show.image})`
-              }}></div>
-          </Link>
-          <div className='freak'>
-            <h2 className='show-title'>{show.title}</h2>
-            <p className='show-description'>{show.description}</p>
+      {shows &&
+        shows.map(show => (
+          <div>
+            <Link to={`/show/${show.id}`}>
+              <div
+                className='show-card'
+                style={{
+                  backgroundImage: `url(${show.picture})`
+                }}></div>
+            </Link>
+            <div className='freak'>
+              <h2 className='show-title'>{show.title}</h2>
+              <p className='show-description'>{show.description}</p>
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
     </div>
   );
 }
