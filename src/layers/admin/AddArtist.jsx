@@ -14,6 +14,11 @@ export default function AddArtist() {
   const handleSubmit = event => {
     event.preventDefault();
     axios.post(`/api/artists`, addArtist);
+    resetForm();
+  };
+
+  const resetForm = () => {
+    setAddArtist("");
   };
 
   return (

@@ -16,13 +16,9 @@ export default function SeeArtist() {
       .then(data => setArtist(data));
   }, [artist]);
 
-  const deleteCard = () => {
-    axios.delete;
-  };
-
   return (
     <div className='container-artist'>
-      <ArtistCard artists={artist} admin={admin} deleteCard={deleteCard} />
+      <ArtistCard artists={artist} admin={admin} setArtist={setArtist} />
     </div>
   );
 }
