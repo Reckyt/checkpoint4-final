@@ -1,0 +1,27 @@
+.dashbord {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  background-color: #596275;
+  min-height: 71vh;
+  /* width: 100%; */
+}
+
+.onglet {
+  width: 20vw;
+  height: 50vh;
+  font-size: 5vh;
+  font-family: "Indie Flower", cursive;
+  border: solid black 2px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.liendemerde {
+  text-decoration: none;
+  color: black;
+}

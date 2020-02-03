@@ -1,0 +1,51 @@
+.contain-admin {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #596275;
+  min-height: 71vh;
+}
+
+.title-admin {
+  font-size: 5vh;
+  font-family: "Indie Flower", cursive;
+}
+
+.form-admin {
+  border: solid 1px black;
+
+  width: 50vw;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.lign-admin {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.lign-admin input,
+textarea {
+  width: 70%;
+}
+
+.lign-admin label {
+  font-size: 3vh;
+  color: white;
+  font-family: "Indie Flower", cursive;
+}
+
+.button-admin {
+  width: 50%;
+  height: 45px;
+  font-size: 3vh;
+  font-family: "Indie Flower", cursive;
+  background-color: white;
+  border: none;
+  margin-top: 40px;
+}

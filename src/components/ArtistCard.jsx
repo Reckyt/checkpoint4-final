@@ -3,7 +3,7 @@ import React from "react";
 import "./ArtistCard.css";
 
 export default function ArtistCard(props) {
-  const { artists } = props;
+  const { artists, admin, deleteCard } = props;
 
   const title = artists.map(x => x.title);
   const description = artists.map(x => x.description);
@@ -35,6 +35,9 @@ export default function ArtistCard(props) {
                   <b>{artist.firstname}</b>
                 </span>
                 <span>{artist.bio}</span>
+                <div
+                  className={admin ? "suppr" : ""}
+                  onClick={() => deleteCard()}></div>
               </div>
             </div>
           </div>

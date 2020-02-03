@@ -7,6 +7,9 @@ export default function NavBar() {
   return (
     <div className='navBar'>
       <div className='navBar-title'>Wild Circus</div>
+      <Link to='/log' className='contain-icon'>
+        <div className='admin'></div>
+      </Link>
       <div className='navBar-link'>
         <div className='link'>
           <Link to='/' className='noDeco'>

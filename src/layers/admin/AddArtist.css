@@ -1,0 +1,57 @@
+.container-artist-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #596275;
+  min-height: 71vh;
+}
+
+.title-artist {
+  font-size: 5vh;
+  font-family: "Indie Flower", cursive;
+}
+
+.artist-form {
+  border: solid 1px black;
+  width: 50vw;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.artist-form input {
+  width: 70%;
+  height: 3vh;
+  font-size: 3vh;
+  font-family: "Indie Flower", cursive;
+}
+
+.artist-form textarea {
+  height: 5vh;
+  font-size: 3vh;
+  font-family: "Indie Flower", cursive;
+}
+
+.button-artist {
+  width: 20%;
+  height: 45px;
+  font-size: 3vh;
+  font-family: "Indie Flower", cursive;
+  background-color: white;
+  border: none;
+  margin-top: 40px;
+}
+
+.option {
+  width: 70%;
+  height: 5vh;
+  font-size: 3vh;
+  font-family: "Indie Flower", cursive;
+}
+
+ImageUploader {
+  background-color: aqua;
+}

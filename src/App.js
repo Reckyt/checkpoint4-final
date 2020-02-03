@@ -7,7 +7,6 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 
-import SignIn from "./layers/SignIn";
 import Home from "./layers/Home";
 import Show from "./layers/Show";
 import Tarif from "./layers/Tarif";
@@ -15,6 +14,11 @@ import Book from "./layers/Book";
 import Reservation from "./layers/Reservation";
 import Contact from "./layers/Contact";
 import Form from "./layers/Form";
+
+import Log from "./layers/Log";
+import Admin from "./layers/admin/Admin";
+import AddArtist from "./layers/admin/AddArtist";
+import SeeArtist from "./layers/admin/SeeArtist";
 
 import "./App.css";
 
@@ -45,6 +49,11 @@ function App(props) {
           <Route path='/contact' component={Contact} />
           <Route path='/reservation' component={Reservation} />
           <Route path='/form' component={Form} />
+
+          <Route path='/log' component={Log} />
+          <Route path='/admin' component={Admin} />
+          <Route path='/add-artist' component={AddArtist} />
+          <Route path='/see-artist' component={SeeArtist} />
         </Switch>
         <Footer />
       </ScrollToTop>

@@ -27,3 +27,15 @@
   color: #303952;
   font-family: "Indie Flower", cursive;
 }
+
+.contain-icon {
+  position: absolute;
+  right: 0;
+}
+
+.admin {
+  width: 5vh;
+  height: 5vh;
+  background-image: url("../assets/system.svg");
+  background-size: cover;
+}
