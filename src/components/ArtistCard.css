@@ -1,7 +1,7 @@
 .container-header {
   display: flex;
   justify-content: center;
-  margin-top: 50px;
+  padding-top: 50px;
 }
 
 .header {
@@ -12,13 +12,14 @@
   flex-direction: column;
   font-size: 4vh;
   font-family: "Indie Flower", cursive;
+  color: #f5cd79;
 }
 
 .flip-container {
   perspective: 1000px;
   margin: 20px;
 }
-/* flip the pane when hovered */
+
 .flip-container:hover .flipper,
 .flip-container.hover .flipper {
   transform: rotateY(180deg);
@@ -31,7 +32,6 @@
   height: 480px;
 }
 
-/* flip speed goes here */
 .flipper {
   transition: 0.6s;
   transform-style: preserve-3d;
@@ -39,7 +39,6 @@
   position: relative;
 }
 
-/* hide back of pane during swap */
 .front,
 .back {
   backface-visibility: hidden;
@@ -48,14 +47,11 @@
   left: 0;
 }
 
-/* front pane, placed above back */
 .front {
   z-index: 2;
-  /* transform: rotateY(0deg); */
   background-size: cover;
 }
 
-/* back, initially hidden pane */
 .back {
   transform: rotateY(180deg);
   background-color: #e77f67;
@@ -67,6 +63,9 @@
   margin: 5px;
   font-size: 4vh;
   font-family: "Indie Flower", cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* --------------------------- */
@@ -80,7 +79,7 @@
 }
 
 .vertical.flip-container .flipper {
-  transform-origin: 100% 213.5px; /* half of height */
+  transform-origin: 100% 213.5px;
 }
 
 .vertical.flip-container:hover .flipper {
@@ -91,5 +90,6 @@
   display: flex;
   flex-wrap: wrap;
   margin: 20px;
+  margin-bottom: 0px;
   justify-content: center;
 }

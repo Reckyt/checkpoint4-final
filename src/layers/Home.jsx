@@ -8,7 +8,7 @@ export default function Home(props) {
   return (
     <div className='home'>
       <div className='home-title'>
-        <h1>Découvrez nos spectacles</h1>
+        <p>Découvrez nos spectacles</p>
       </div>
       <ShowCard props={props} />
     </div>

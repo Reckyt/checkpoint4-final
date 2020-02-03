@@ -5,6 +5,7 @@ import TarifCard from "../components/TarifCard";
 
 export default function Tarif() {
   const [popUp, setPopUp] = useState(false);
+  const [bloc, setBloc] = useState(false);
   const [click, setClick] = useState(1);
 
   const handleClick = () => {
@@ -12,6 +13,7 @@ export default function Tarif() {
     if (click === 1) {
       console.log("u", click);
       setPopUp(true);
+      setBloc(true);
       setClick(0);
     } else {
       setPopUp(false);
@@ -33,6 +35,7 @@ export default function Tarif() {
           retournez une carte et découvrez si vous avez le cul bordé de nouilles
         </span>
       </div>
+      <div className={bloc ? "block" : "blockf"}></div>
 
       <div className='container-price'>
         <TarifCard price={"gratuit"} handlePopUp={handleClick} click={click} />

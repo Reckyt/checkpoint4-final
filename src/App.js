@@ -23,7 +23,7 @@ function App(props) {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/api/show")
+      .get("http://localhost:3000/api/shows")
       .then(res => res.data)
       .then(data => setShows(data));
   }, []);

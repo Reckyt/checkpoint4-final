@@ -9,7 +9,7 @@ export default function Show(props) {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/api/artist/${props.match.params.id}`)
+      .get(`http://localhost:3000/api/artists/${props.match.params.id}`)
       .then(res => res.data)
       .then(data => setArtists(data));
   }, [""]);

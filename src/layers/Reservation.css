@@ -1,36 +1,37 @@
 .resa {
   height: 71vh;
   background-color: #596275;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Indie Flower", cursive;
+  flex-direction: column;
 }
 
-#stripped {
-  background: #000;
-  background-image: url("../assets/Clown-Illustration-7.svg");
-  background-size: cover;
-  font-size: 0;
-}
-#stripped svg {
-  background: #fff;
-}
-#stripped svg polyline {
-  fill: none;
-  stroke: #000;
-  stroke-width: 200;
+.calendar {
+  width: 70%;
+  height: 70%;
+  background-color: #596275;
+  border: solid 5px #e77f67;
+  font-size: 5vh;
 }
 
-div#stripped svg polyline {
-  stroke-dasharray: 20000;
-  stroke-dashoffset: 20000;
+.calendar-notice {
+  font-size: 5vh;
+  width: 100%;
+  height: 10vh;
+  background-color: #303952;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@keyframes scribble {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-div#stripped svg polyline {
-  animation: scribble 3s linear forwards;
-}
-div#stripped svg {
-  mix-blend-mode: lighten;
+.resa-btn {
+  margin-bottom: 2vh;
+  width: 12%;
+  height: 45px;
+  font-size: 3vh;
+  background-color: white;
+  font-family: "Indie Flower", cursive;
+  border: none;
 }
